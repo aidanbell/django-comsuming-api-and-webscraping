@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- MaterialzeCSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <title>Cat Collector</title>
+</head>
+
+<body class="container">
+  <div class="row">
+    <div class="col s4">
+      <h1>Weather in {{weather_data.name}}</h1>
+      <img src="http://openweathermap.org/img/w/{{ icon }}.png" alt="Image">
+      <h3>Temp: {{weather_data.main.temp}}</h3>
+      <h3>Feels Like: {{weather_data.main.feels_like}}</h3>
+    </div>
+    <div class="col s4"></div>
+    <div class="col s4">
+      {% for article in news %}
+      <a class="card-link" href="{{article.href}}" target="_blank">
+        <div class="card-panel hoverable">
+          <div class="card-content">
+            <span class="card-title bold">{{ article.title }}</span>
+          </div>
+          <div class="card-action">
+            <span class="muted">{{ article.time }}</span>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+
+</html>
