@@ -77,7 +77,7 @@ Basic
 
 Webscraping is something that has become quite popular in the coding community. Allow me to paint you a word picture:
 
-You're building an app that needs some data from a pre-existing website. Of course, as a knowledgable developer, you check to see if they have an API that your app can consume. You're (as it usually is) shocked to find that they don't! How are you going to get that juicy data into your app now?
+You're building an app that needs some data from a pre-existing website. Of course, as a knowledgable developer, you check to see if they have an API that your app can consume. You're shocked to find that they don't! How are you going to get that juicy data into your app now?
 
 Enter Webscraping, a way to, as the name suggests, scrape through a website, and extract just the information that we want. Come to think of it, lets go back to an eariler request that we made, and have a look at the data that is returned. 
 
