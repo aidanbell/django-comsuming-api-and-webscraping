@@ -5,9 +5,10 @@ import requests
 # Create your views here.
 def home(request):
   # Weather API
-  url = "http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=a1c7cdd90159b4459ed96cc67ae2b3ca"
-  city = 'Paris'
-  weather_data = requests.get(url.format(city)).json()
+  url = "http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid={}"
+  city = 'Toronto'
+  api_key = 'a1c7cdd90159b4459ed96cc67ae2b3ca'
+  weather_data = requests.get(url.format(city, api_key)).json()
   icon = weather_data['weather'][0]['icon']
 
   # Beautiful Soup
