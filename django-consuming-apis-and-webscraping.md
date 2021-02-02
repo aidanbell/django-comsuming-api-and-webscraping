@@ -106,7 +106,7 @@ If we have a look at the HTML of the site, we can see that all of the content is
 # let's save the response of our request
 >>> page = requests.get('https://spacejam.com/')
 # now the magic
->>> soup = BeautifulSoup(page.contents, 'html5lib')
+>>> soup = BeautifulSoup(page.content, 'html5lib')
 # now if we have a look at soup, we'll see our html more clearly
 # Let's put it to work!
 >>> soup.find_all('font')
