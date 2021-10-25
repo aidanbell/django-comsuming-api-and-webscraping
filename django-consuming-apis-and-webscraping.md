@@ -30,7 +30,7 @@ Python comes with a fantastic library called 'requests' that we can use to -- yo
 # First we need to import the library
 >>> import requests
 # Lets start with something simple
->>> requests.get('https://spacejam.com/')
+>>> requests.get('https://spacejam.com/1996')
 <Response [200]>
 ```
 
@@ -83,7 +83,7 @@ Enter Webscraping, a way to, as the name suggests, scrape through a website, and
 
 Open a Python shell:
 ```python
->>> requests.get('https://spacejam.com').text
+>>> requests.get('https://spacejam.com/1996').text
 '<html>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<!-- Copyright 1996 Warner Bros. Online -->\r\n...'
 ```
 
@@ -104,7 +104,7 @@ If we have a look at the HTML of the site, we can see that all of the content is
 # first we need to import BeautifulSoup
 >>> from bs4 import BeautifulSoup
 # let's save the response of our request
->>> page = requests.get('https://spacejam.com/')
+>>> page = requests.get('https://spacejam.com/1996')
 # now the magic
 >>> soup = BeautifulSoup(page.content, 'html5lib')
 # now if we have a look at soup, we'll see our html more clearly
